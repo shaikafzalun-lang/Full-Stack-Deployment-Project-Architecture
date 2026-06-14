@@ -1,0 +1,39 @@
+# netlify.toml — Netlify Deployment Configuration
+# Author: Afzalun Shaik
+# Deploy to: https://app.netlify.com → drag & drop the shopforge folder
+
+[build]
+  publish = "."
+  command = ""    # No build step — pure HTML/CSS/JS
+
+# SPA Redirects — all routes serve index.html (hash router handles the rest)
+[[redirects]]
+  from   = "/*"
+  to     = "/index.html"
+  status = 200
+
+# Security headers
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options        = "DENY"
+    X-XSS-Protection       = "1; mode=block"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy        = "strict-origin-when-cross-origin"
+
+# Cache static assets aggressively
+[[headers]]
+  for = "/css/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/js/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+# Cache fonts
+[[headers]]
+  for = "/*.woff2"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"

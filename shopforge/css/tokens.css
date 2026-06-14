@@ -1,0 +1,94 @@
+/* ============================================================
+   tokens.css — Design System Variables
+   Module 1 of 6 CSS files
+   Author: Afzalun Shaik
+============================================================ */
+
+:root {
+  /* Palette — Dark theme (default) */
+  --bg:           #0C0C10;
+  --bg-raised:    #14141A;
+  --surface:      #1A1A24;
+  --surface-2:    #22222E;
+  --surface-3:    #2A2A38;
+  --border:       rgba(255,255,255,0.07);
+  --border-med:   rgba(255,255,255,0.12);
+  --text:         #F2F0FF;
+  --text-2:       #A09CB8;
+  --text-3:       #6B6882;
+  --accent:       #7C3AED;
+  --accent-2:     #9B5CF6;
+  --accent-3:     #C4B5FD;
+  --accent-glow:  rgba(124,58,237,0.22);
+  --accent-soft:  rgba(124,58,237,0.10);
+  --success:      #10B981;
+  --warning:      #F59E0B;
+  --danger:       #EF4444;
+  --gold:         #D4AF37;
+
+  /* Typography */
+  --font-display: 'DM Serif Display', serif;
+  --font-body:    'DM Sans', sans-serif;
+
+  /* Spacing scale */
+  --space-1:  4px;
+  --space-2:  8px;
+  --space-3:  12px;
+  --space-4:  16px;
+  --space-5:  20px;
+  --space-6:  24px;
+  --space-8:  32px;
+  --space-10: 40px;
+  --space-12: 48px;
+  --space-16: 64px;
+  --space-20: 80px;
+  --space-24: 96px;
+
+  /* Radii */
+  --r-sm:  6px;
+  --r:     12px;
+  --r-md:  16px;
+  --r-lg:  24px;
+  --r-xl:  32px;
+
+  /* Shadows */
+  --shadow-sm:   0 1px 4px rgba(0,0,0,0.3);
+  --shadow:      0 4px 20px rgba(0,0,0,0.4);
+  --shadow-lg:   0 12px 48px rgba(0,0,0,0.5);
+  --shadow-card: 0 2px 12px rgba(0,0,0,0.35);
+  --shadow-glow: 0 0 32px rgba(124,58,237,0.18);
+
+  /* Motion */
+  --ease:      cubic-bezier(0.4, 0, 0.2, 1);
+  --ease-out:  cubic-bezier(0, 0, 0.2, 1);
+  --dur-fast:  150ms;
+  --dur:       250ms;
+  --dur-slow:  400ms;
+
+  /* Nav height (used for scroll offset) */
+  --nav-h: 68px;
+}
+
+/* ---- LIGHT THEME ---- */
+[data-theme="light"] {
+  --bg:          #F5F3FF;
+  --bg-raised:   #EEEBFF;
+  --surface:     #FFFFFF;
+  --surface-2:   #F5F3FF;
+  --surface-3:   #EDE9FE;
+  --border:      rgba(124,58,237,0.10);
+  --border-med:  rgba(124,58,237,0.18);
+  --text:        #160D30;
+  --text-2:      #5B4E8A;
+  --text-3:      #9D8EC2;
+  --accent:      #6D28D9;
+  --accent-2:    #7C3AED;
+  --accent-3:    #5B21B6;
+  --accent-glow: rgba(109,40,217,0.15);
+  --accent-soft: rgba(109,40,217,0.07);
+  --shadow-sm:   0 1px 4px rgba(109,40,217,0.08);
+  --shadow:      0 4px 20px rgba(109,40,217,0.10);
+  --shadow-lg:   0 12px 48px rgba(109,40,217,0.12);
+  --shadow-card: 0 2px 12px rgba(109,40,217,0.08);
+  --shadow-glow: 0 0 32px rgba(109,40,217,0.12);
+}
